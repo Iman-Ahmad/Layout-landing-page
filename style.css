@@ -1,0 +1,831 @@
+/* Reset & Base */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ===== MOBILE FIRST (Default) ===== */
+
+/* Header */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #A8D3FF;
+  backdrop-filter: blur(64px);
+  z-index: 100;
+}
+
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.header__logo {
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  z-index: 101;
+}
+
+/* BURGER BUTTON - ALWAYS VISIBLE ON MOBILE */
+.header__burger {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  z-index: 101;
+  display: block !important;
+}
+
+/* NAVIGATION - FIXED: Proper mobile menu */
+.header__nav {
+  display: none !important;
+  position: fixed;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(64px);
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 99;
+}
+
+/* CLASS TO SHOW MENU */
+.header__nav--open {
+  display: flex !important;
+}
+
+.header__menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.header__item {
+  width: 100%;
+  border-top: 1px solid rgba(0,0,0,0.1);
+  padding-top: 15px;
+}
+
+.header__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: #000;
+  font-family: "Radio Canada Big", sans-serif;
+  font-weight: 500;
+}
+
+/* Main Content */
+.main {
+  width: 100%;
+  margin-top: 60px;
+}
+
+/* ===== INTRO SECTION ===== */
+.intro {
+  background: linear-gradient(180deg, #A8D3FF 0%, #FFF4DF 100%);
+  padding: 40px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  position: relative;
+  overflow: visible;
+}
+
+/* REMOVED PADDING FROM SIDES - EDGE TO EDGE */
+.intro__content {
+  width: 100%;
+  max-width: 335px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.intro__text {
+  text-align: center;
+}
+
+.intro__title {
+  font-family: "Source Serif Pro", serif;
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.intro__title--first {
+  font-weight: 400;
+}
+
+.intro__title--second {
+  font-family: "Radio Canada Big", sans-serif;
+  font-weight: 400;
+}
+
+.intro__description {
+  font-family: "Source Serif Pro", serif;
+  font-size: 18px;
+  line-height: 1.4;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Mobile: buttons in column */
+.intro__buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 4px;
+  font-family: "Geist Mono", monospace;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button__bullet {
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  border-radius: 50%;
+}
+
+.intro__image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  position: relative;
+}
+
+/* Intro image edge-to-edge */
+.intro__image img {
+  width: 100%;
+  max-width: 335px;
+  height: auto;
+  border-radius: 12px;
+  border: 2px solid #000;
+  position: relative;
+  bottom: -40px;
+  margin-bottom: -40px;
+}
+
+/* ===== DASHBOARD SECTION ===== */
+.dashboard {
+  background: #fff;
+  padding: 80px 0 40px 0;
+  width: 100%;
+}
+
+.dashboard__container {
+  width: 100%;
+  max-width: 335px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.dashboard__header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.dashboard__title {
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #000;
+}
+
+.dashboard__date {
+  font-family: "Geist Mono", monospace;
+  font-size: 14px;
+  color: #666;
+}
+
+.dashboard__stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dashboard__stat {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 1px solid rgba(219, 224, 236, 1);
+}
+
+.stat__value {
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+  color: #000;
+}
+
+.stat__label {
+  font-family: "Source Serif Pro", serif;
+  font-size: 16px;
+  color: #333;
+}
+
+.stat__trend {
+  font-family: "Geist Mono", monospace;
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.trend--up {
+  color: #10b981;
+}
+
+.trend--down {
+  color: #ef4444;
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+  background: #fff;
+  padding: 40px 0 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.features__title {
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+  max-width: 335px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.features__content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.features__image img {
+  width: 100%;
+  max-width: 335px;
+  height: auto;
+}
+
+.features__list {
+  width: 100%;
+  max-width: 335px;
+}
+
+.features__item {
+  border-top: 1px solid rgba(219, 224, 236, 1);
+  padding: 20px 0;
+}
+
+.features__item:last-child {
+  border-bottom: 1px solid rgba(219, 224, 236, 1);
+}
+
+.features__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.features__item-title {
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.features__item-number {
+  font-family: "Geist Mono", monospace;
+  font-size: 14px;
+  color: #666;
+}
+
+.features__item-text {
+  font-family: "Source Serif Pro", serif;
+  font-size: 18px;
+  line-height: 1.4;
+}
+
+.features__button {
+  width: 100%;
+  max-width: 335px;
+  margin-top: 30px;
+}
+
+/* ===== VALUES SECTION ===== */
+.values {
+  background: url('pics/values_background.png') center/cover;
+  padding: 60px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.values__header {
+  text-align: center;
+  max-width: 335px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.values__title {
+  font-size: 36px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.values__title--first {
+  font-family: "Source Serif Pro", serif;
+  font-weight: 400;
+}
+
+.values__title--second {
+  font-family: "Radio Canada Big", sans-serif;
+  font-weight: 400;
+}
+
+.values__list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 335px;
+  padding: 0 20px;
+}
+
+.values__item {
+  background: #fff;
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.values__icon {
+  width: 24px;
+  height: 24px;
+}
+
+.values__item-title {
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.values__item-text {
+  font-family: "Source Serif Pro", serif;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #333;
+}
+
+/* ===== FOOTER SECTION ===== */
+.footer {
+  background: rgba(255, 245, 70, 1);
+  padding: 40px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  width: 100%;
+}
+
+.footer__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 335px;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.footer__links ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: rgba(102, 100, 15, 1);
+  font-family: "Radio Canada Big", sans-serif;
+  font-weight: 500;
+  padding: 0;
+  width: 100%;
+}
+
+.footer__links a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.footer__rights {
+  font-family: "Source Serif Pro", serif;
+  font-size: 18px;
+  color: rgba(102, 100, 15, 1);
+  text-align: center;
+  width: 100%;
+}
+
+.footer__image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.footer__image img {
+  width: 100%;
+  max-width: 335px;
+  height: auto;
+  mix-blend-mode: multiply;
+}
+
+.footer__logo {
+  font-family: "Radio Canada Big", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  color: rgba(102, 100, 15, 1);
+  text-decoration: none;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+}
+
+/* ===== TABLET (768px and up) ===== */
+@media (min-width: 768px) {
+  /* Header - Show nav, hide burger */
+  .header__burger {
+    display: none !important;
+  }
+  
+  .header__nav {
+    position: static;
+    display: flex !important;
+    width: auto;
+    background: transparent;
+    backdrop-filter: none;
+    padding: 0;
+    box-shadow: none;
+  }
+  
+  .header__menu {
+    flex-direction: row;
+    gap: 2rem;
+  }
+  
+  .header__item {
+    border: none;
+    padding: 0;
+    width: auto;
+  }
+  
+  /* Intro */
+  .intro {
+    padding: 80px 0 0 0;
+  }
+  
+  .intro__content {
+    max-width: 600px;
+    padding: 0 40px;
+  }
+  
+  /* FIXED: Buttons in row for tablet */
+  .intro__buttons {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .intro__image img {
+    max-width: 600px;
+    bottom: -60px;
+    margin-bottom: -60px;
+    width: calc(100% - 80px);
+  }
+  
+  /* Dashboard */
+  .dashboard__container {
+    max-width: 600px;
+    padding: 0 40px;
+  }
+  
+  .dashboard__stats {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .dashboard__stat {
+    flex: 1;
+    min-width: 180px;
+  }
+  
+  /* Features */
+  .features {
+    padding: 60px 0 80px 0;
+  }
+  
+  .features__title {
+    max-width: 600px;
+    font-size: 32px;
+    padding: 0 40px;
+  }
+  
+  .features__content {
+    padding: 0 40px;
+    max-width: 600px;
+  }
+  
+  .features__image img {
+    max-width: 500px;
+    width: 100%;
+  }
+  
+  .features__list {
+    max-width: 500px;
+  }
+  
+  /* Values */
+  .values {
+    padding: 80px 0;
+  }
+  
+  .values__header {
+    max-width: 600px;
+    padding: 0 40px;
+  }
+  
+  .values__list {
+    padding: 0 40px;
+    max-width: 600px;
+  }
+  
+  /* Footer */
+  .footer {
+    padding: 60px 0;
+  }
+  
+  .footer__header {
+    max-width: 600px;
+    padding: 0 40px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer__links ul {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+  }
+  
+  .footer__rights {
+    text-align: right;
+    max-width: 300px;
+  }
+  
+  .footer__image img {
+    max-width: 600px;
+    width: calc(100% - 80px);
+  }
+  
+  .footer__logo {
+    padding: 0 40px;
+  }
+}
+
+/* ===== DESKTOP (1024px and up) ===== */
+@media (min-width: 1024px) {
+  /* Header */
+  .header__container {
+    padding: 0;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* Intro - NO PADDING ON SIDES */
+  .intro {
+    padding: 120px 0 0 0;
+  }
+  
+  .intro__content {
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  /* FIXED: Buttons in row for desktop */
+  .intro__buttons {
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .intro__image img {
+    max-width: 1000px;
+    bottom: -80px;
+    margin-bottom: -80px;
+    width: 100%;
+  }
+  
+  /* Dashboard - NO PADDING ON SIDES */
+  .dashboard__container {
+    max-width: 1000px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  /* Features - NO PADDING ON SIDES */
+  .features {
+    padding: 120px 0 120px 0;
+  }
+  
+  .features__title {
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .features__content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    gap: 80px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .features__image img {
+    max-width: 600px;
+  }
+  
+  .features__list {
+    max-width: 450px;
+  }
+  
+  /* Values - NO PADDING ON SIDES */
+  .values {
+    padding: 120px 0;
+  }
+  
+  .values__header {
+    max-width: 800px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .values__list {
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+    gap: 30px;
+  }
+  
+  .values__item {
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  /* Footer - NO PADDING ON SIDES */
+  .footer {
+    padding: 80px 0;
+  }
+  
+  .footer__header {
+    max-width: 1200px;
+    padding: 0;
+    margin: 0 auto;
+  }
+  
+  .footer__image img {
+    max-width: 1400px;
+    width: 90%;
+    height: 200px;
+  }
+  
+  .footer__logo {
+    padding: 0;
+    font-size: 200px; /* Match image height */
+    line-height: 1; /* Prevent extra spacing */
+    height: 200px; /* Match exact height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Animation styles */
+
+/* Button transitions */
+.button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+/* Image transitions */
+.intro__image img,
+.features__image img,
+.footer__image img {
+  transition: transform 0.3s ease;
+}
+
+/* Card hover effects */
+.dashboard__stat,
+.values__item {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard__stat:hover,
+.values__item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Link hover effects */
+.header__link,
+.footer__links a {
+  transition: color 0.3s ease;
+}
+
+.header__link:hover,
+.footer__links a:hover {
+  color: #666;
+  text-decoration: underline;
+}
+
+/* Logo hover effect */
+.footer__logo {
+  transition: transform 0.3s ease;
+}
+
+.footer__logo:hover {
+  transform: scale(1.05);
+}
+
+/* Menu animation */
+.header__nav {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+/* Loading animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.main {
+  animation: fadeIn 0.5s ease;
+}

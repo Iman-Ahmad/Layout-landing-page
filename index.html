@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aetherfield</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+Pro:wght@400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Radio+Canada+Big:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header__container">
+      <a href="#" class="header__logo">Aetherfield</a>
+      
+      <button class="header__burger" aria-label="Open menu">
+        ☰
+      </button>
+      
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li class="header__item"><a href="#" class="header__link">Product</a></li>
+          <li class="header__item"><a href="#" class="header__link">Journal</a></li>
+          <li class="header__item"><a href="#" class="header__link">About</a></li>
+          <li class="header__item"><a href="#" class="header__link">Careers</a></li>
+          <li class="header__item">
+            <a href="https://www.figma.com/files/team/1256914278874115572/recents-and-sharing?fuid=1256914272530483096" target="_blank" class="header__link">Get started <i class="fa-solid fa-arrow-right"></i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="intro">
+      <div class="intro__content">
+        <div class="intro__text">
+          <div class="intro__header">
+            <h1 class="intro__title intro__title--first">Sustainability insights,</h1>
+            <h2 class="intro__title intro__title--second">built for business</h2>
+          </div>
+          <p class="intro__description">
+            Track impact, reduce emissions, and accelerate progress—with clarity and confidence.
+          </p>
+        </div>
+        
+        <div class="intro__buttons">
+          <button class="button">
+            <span class="button__bullet"></span>
+            <span class="button__text">Request a demo</span>
+          </button>
+          <button class="button">
+            <span class="button__bullet"></span>
+            <span class="button__text">Explore the platform</span>
+          </button>
+        </div>
+      </div>
+      
+      <div class="intro__image">
+        <img src="pics/hero_image.png" alt="Sustainability dashboard showing analytics">
+      </div>
+    </section>
+
+    <section class="dashboard">
+      <div class="dashboard__container">
+        <div class="dashboard__header">
+          <h2 class="dashboard__title">Good morning, Acme Inc</h2>
+          <p class="dashboard__date">Monday, 15 April 2024</p>
+        </div>
+        <div class="dashboard__stats">
+          <div class="dashboard__stat">
+            <span class="stat__value">-12%</span>
+            <span class="stat__label">Carbon footprint</span>
+            <span class="stat__trend trend--down">↓ 2% from last month</span>
+          </div>
+          <div class="dashboard__stat">
+            <span class="stat__value">87%</span>
+            <span class="stat__label">Energy efficiency</span>
+            <span class="stat__trend trend--up">↑ 5% from last month</span>
+          </div>
+          <div class="dashboard__stat">
+            <span class="stat__value">24/36</span>
+            <span class="stat__label">SDG goals on track</span>
+            <span class="stat__trend trend--up">↑ 3 from last quarter</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features">
+      <h2 class="features__title">Everything you need to measure, model, and act on sustainability</h2>
+      <div class="features__content">
+        <div class="features__image">
+          <img src="pics/features_image.png" alt="Features visualization">
+        </div>
+        
+        <div class="features__list">
+          <article class="features__item">
+            <div class="features__item-header">
+              <h3 class="features__item-title">Track</h3>
+              <span class="features__item-number">001</span>
+            </div>
+            <p class="features__item-text">
+              Emissions, energy, and waste across your value chain
+            </p>
+          </article>
+          
+          <article class="features__item">
+            <div class="features__item-header">
+              <h3 class="features__item-title">Model</h3>
+              <span class="features__item-number">002</span>
+            </div>
+            <p class="features__item-text">
+              Forecast performance and goal alignment
+            </p>
+          </article>
+          
+          <article class="features__item">
+            <div class="features__item-header">
+              <h3 class="features__item-title">Report</h3>
+              <span class="features__item-number">003</span>
+            </div>
+            <p class="features__item-text">
+              Generate ESG disclosures, automate frameworks
+            </p>
+          </article>
+          
+          <article class="features__item">
+            <div class="features__item-header">
+              <h3 class="features__item-title">Act</h3>
+              <span class="features__item-number">004</span>
+            </div>
+            <p class="features__item-text">
+              Surface insights and operational next steps
+            </p>
+          </article>
+          
+          <a href="#" class="button features__button">
+            <span class="button__bullet"></span>
+            <span class="button__text">Explore features</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="values">
+      <div class="values__header">
+        <h1 class="values__title values__title--first">Built for clarity</h1>
+        <h2 class="values__title values__title--second">Designed for action</h2>
+      </div>
+      
+      <div class="values__list">
+        <article class="values__item">
+          <div class="values__icon">
+            <svg width="50" height="50" viewBox="0 0 50 50" aria-hidden="true">
+              <circle cx="20" cy="20" r="18" fill="none" stroke="black" />
+              <line x1="20" y1="2" x2="20" y2="38" stroke="black"/>
+              <line x1="20" y1="20" x2="38" y2="20" stroke="black"/>
+            </svg>
+          </div>
+          <h4 class="values__item-title">Clarity drives action</h4>
+          <p class="values__item-text">
+            We believe better decisions start with better data—measured, visible, and trusted.
+          </p>
+        </article>
+        
+        <article class="values__item">
+          <div class="values__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <ellipse cx="20" cy="20" rx="9" ry="20" stroke="currentColor" stroke-width="2"/>
+              <ellipse cx="20" cy="20" rx="20" ry="9" stroke="currentColor" stroke-width="2"/>
+              <ellipse cx="20" cy="20" rx="20" ry="20" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <h4 class="values__item-title">Sustainability is a systems problem</h4>
+          <p class="values__item-text">
+            We build tools that help teams connect the dots between operations, impact, and accountability.
+          </p>
+        </article>
+        
+        <article class="values__item">
+          <div class="values__icon">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" aria-hidden="true">
+              <circle cx="20" cy="20" r="20" stroke="currentColor" stroke-width="2"/>
+              <g transform="translate(20 20) rotate(-45)">
+                <path d="M -10 0 H 10 M 2 -6 L 10 0 L 2 6" stroke="currentColor" stroke-width="2"/>
+              </g>
+            </svg>
+          </div>
+          <h4 class="values__item-title">Progress over perfection</h4>
+          <p class="values__item-text">
+            We support real-world momentum—helping organizations move from ambition to measurable change.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer__header">
+      <nav class="footer__links">
+        <ul>
+          <li><a href="#">Product</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="https://www.figma.com/files/team/1256914278874115572/recents-and-sharing?fuid=1256914272530483096" target="_blank">Get started</a></li>
+        </ul>
+      </nav>
+      <p class="footer__rights">© 2025 · All rights reserved</p>
+    </div>
+    
+    <div class="footer__image">
+      <img src="pics/footer_image.png" alt="Footer illustration">
+    </div>
+    
+    <a href="#" class="footer__logo">Aetherfield</a>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
